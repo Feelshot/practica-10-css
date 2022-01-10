@@ -77,7 +77,10 @@ body {
     font-size: 20px;
     color: var(--White);
 }
-.card-purple .text-container p:nth-child(2) {
+.card-purple .text-container .text-desktop {
+    display: none;
+}
+.card-purple .text-container p:nth-child(3) {
     width: 248px;
     color: var(--Light-gray);
     font-weight: lighter;
@@ -198,14 +201,95 @@ body {
     }
 
     /* ---- Tarjeta morada ---- */
-    .card-purple {grid-area: top1; width: 520px; height: 275px; margin: 0; background-position: 80% 0%;}
+    .card-purple {
+        grid-area: top1; 
+        width: 520px; 
+        height: 275px; 
+        margin: 0; 
+        background-position: 80% 0%;
+    }
+    .card-purple .text-container p:nth-child(1) {
+        display: none !important;
+    }   
+    .card-purple .text-container .text-desktop {
+        display: contents !important;
+        width: 280px;
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: var(--White);
+    }
+    .card-purple .text-container p:nth-child(3) {
+        margin-top: 20px;
+        width: 480px;
+    } 
 
     /* ---- Tarjeta gris ---- */
-    .card-grey {grid-area: top2; width: 250px; height: 275px;margin: 0;}
+    .card-grey {
+        grid-area: top2; 
+        width: 250px; 
+        height: 275px;
+        margin: 0;
+    }
+    .card-grey .text-container p:nth-child(1) {
+        width: 230px;
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--Light-grayish-blue);
+    }
+    .card-grey .text-container p:nth-child(2) {
+        color: var(--Light-gray);
+        width: 190px;
+    } 
     /* ---- Tarjeta blanca 02 ---- */
-    .card-white02 {grid-area: top3; width: 250px; height: 550px; margin: 0;}
+    .card-white02 {
+        grid-area: top3; 
+        width: 250px; 
+        height: 570px; 
+        margin: 0;
+    }
+    .card-white02 .text-container p:nth-child(1) {
+        width: 180px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--Very-dark-blackish-blue);
+    }
+    .card-white02 .text-container p:nth-child(2) {
+        width: 190px;
+    }
     /* ---- Tarjeta blanca 01 ---- */
-    .card-white01 {grid-area: bot1; width: 250px; height: 275px; margin: 0;}
+    .card-white01 {
+        grid-area: bot1; 
+        width: 250px; 
+        height: 275px; 
+        margin: 0;
+    }
+    .card-white01 .text-container p:nth-child(1) {
+        width: 180px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--Very-dark-blackish-blue);
+    }
+    .card-white01 .text-container p:nth-child(2) {
+        color: hsl(0, 0%, 49%);
+        width: 180px;
+    }
     /* ---- Tarjeta negra ---- */
-    .card-black {grid-area: bot2; width: 520px; height: 275px; margin: 0;}
+    .card-black {
+        grid-area: bot2; 
+        width: 520px; 
+        height: 275px; 
+        margin: 0;
+    }
+    .card-black .text-container p:nth-child(1) {
+        width: 440px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    .card-black .text-container p:nth-child(2) {
+        width: 464px;
+    }
 }
