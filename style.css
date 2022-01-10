@@ -19,4 +19,193 @@ Note for text colors:
 body {
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
+}
+/* ---- Ajustes generales a tarjetas ---- */
+.card-container {
+    width: 320px;
+    margin: 10px auto 10px auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 6px rgb(218, 218, 218);
+}
+.card-container img {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    margin: 20px 0 0 30px;
+}
+.name-container p:nth-child(1) {
+    margin: 24px 0 0 10px;
+    font-size: 16px;
+}
+.name-container p:nth-child(2) {
+    margin-left: 10px;
+}
+.name-container {
+    margin: 0 0 10px 0;
+    display: flex;
+}
+.name-text-container {
+    display: flex;
+    flex-direction: column;
+}
+.text-container {
+    margin: 10px 10px 10px 30px;
+}
+/* ---- Tarjeta morada ---- */
+.card-purple {
+    background-color: var(--Moderate-violet);
+    background-image: url(img/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+    margin-top: 30px;
+    height: 426px;
+}
+.card-purple img {
+    border: 2px solid rgb(160, 119, 234);
+}
+.card-purple .name-container p:nth-child(1) {
+    color: var(--White);
+}
+.card-purple .name-container p:nth-child(2) {
+    color: var(--Light-gray);
+}
+.card-purple .text-container p:nth-child(1) {
+    width: 280px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--White);
+}
+.card-purple .text-container p:nth-child(2) {
+    width: 248px;
+    color: var(--Light-gray);
+    font-weight: lighter;
+}
+/* ---- Tarjeta gris ---- */
+.card-grey {
+    background-color: var(--Very-dark-grayish-blue);
+    height: 230px;
+}
+.card-grey .name-container p:nth-child(1) {
+    color: var(--White);
+}
+.card-grey .name-container p:nth-child(2) {
+    color: var(--Light-gray);
+    font-weight: lighter;
+}
+.card-grey .text-container p:nth-child(1) {
+    width: 250px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--Light-grayish-blue);
+}
+.card-grey .text-container p:nth-child(2) {
+    color: var(--Light-gray);
+}
+
+/* ---- Tarjeta blanca 01 ---- */
+.card-white01 {
+    background-color: var(--White);
+    height: 210px;
+}
+.card-white01 .name-container p:nth-child(1) {
+    color: var(--Very-dark-grayish-blue);
+}
+.card-white01 .name-container p:nth-child(2) {
+    color: var(--Light-gray);
+    font-weight: lighter;
+}
+.card-white01 .text-container p:nth-child(1) {
+    width: 250px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--Very-dark-blackish-blue);
+}
+.card-white01 .text-container p:nth-child(2) {
+    color: hsl(0, 0%, 49%);
+    width: 250px;
+}
+
+/* ---- Tarjeta negra ---- */
+.card-black {
+    background-color: var(--Very-dark-blackish-blue);
+    height: 370px;
+}
+.card-black img {
+    border: 2px solid rgb(160, 119, 234);
+}
+.card-black .name-container p:nth-child(1) {
+    color: var(--White);
+}
+.card-black .name-container p:nth-child(2) {
+    color: hsl(229, 6%, 63%);
+    font-weight: lighter;
+}
+.card-black .text-container p:nth-child(1) {
+    width: 260px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--White);
+}
+.card-black .text-container p:nth-child(2) {
+    color: hsl(231, 8%, 64%);
+    width: 250px;
+}
+/* ---- Tarjeta blanca 02 ---- */
+.card-white02 {
+    background-color: var(--White);
+    height: 404px;
+    margin-bottom: 100px;
+}
+.card-white02 .name-container p:nth-child(1) {
+    color: var(--Very-dark-grayish-blue);
+    font-size: 15px;
+}
+.card-white02 .name-container p:nth-child(2) {
+    color: var(--Light-gray);
+    font-weight: lighter;
+}
+.card-white02 .text-container p:nth-child(1) {
+    width: 280px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--Very-dark-blackish-blue);
+}
+.card-white02 .text-container p:nth-child(2) {
+    color: hsl(0, 0%, 49%);
+    width: 262px;
+}
+
+/* ---- Media Queries Desktop ---- */
+@media (min-width: 1000px) {
+    main {
+        display: grid;
+        justify-content: center;
+        margin: 75px;
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 275px 275px;
+        grid-template-areas: 
+            'top1 top1 top2 top3'
+            'bot1 bot2 bot2 top3'
+        ;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    /* ---- Tarjeta morada ---- */
+    .card-purple {grid-area: top1; width: 520px; height: 275px; margin: 0; background-position: 80% 0%;}
+
+    /* ---- Tarjeta gris ---- */
+    .card-grey {grid-area: top2; width: 250px; height: 275px;margin: 0;}
+    /* ---- Tarjeta blanca 02 ---- */
+    .card-white02 {grid-area: top3; width: 250px; height: 550px; margin: 0;}
+    /* ---- Tarjeta blanca 01 ---- */
+    .card-white01 {grid-area: bot1; width: 250px; height: 275px; margin: 0;}
+    /* ---- Tarjeta negra ---- */
+    .card-black {grid-area: bot2; width: 520px; height: 275px; margin: 0;}
 }
